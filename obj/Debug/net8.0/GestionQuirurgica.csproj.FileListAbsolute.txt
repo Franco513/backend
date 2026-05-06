@@ -106,3 +106,4 @@ C:\Users\USUARIO\Documents\pr3\Gestion Quirurgica\obj\Debug\net8.0\GestionQuirur
 C:\Users\USUARIO\Documents\pr3\Gestion Quirurgica\obj\Debug\net8.0\GestionQuirurgica.genruntimeconfig.cache
 C:\Users\USUARIO\Documents\pr3\Gestion Quirurgica\obj\Debug\net8.0\ref\GestionQuirurgica.dll
 C:\Users\USUARIO\Documents\pr3\Gestion Quirurgica\obj\Debug\net8.0\GestionQuirurgica.sourcelink.json
+C:\Users\USUARIO\Documents\pr3\Gestion Quirurgica\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
