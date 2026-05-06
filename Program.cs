@@ -3,7 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 🔥 CORS (AGREGAR ESTO)
+// 🔥 CONFIGURAR CONEXIÓN DESDE VARIABLE DE ENTORNO (Render)
+var connectionString = Environment.GetEnvironmentVariable("DefaultConnection");
+
+// Si no encuentra la variable, busca en appsettings.json
+if (string.IsNullOrEmpty(connectionString))
+{
+    connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
+// 🔥 CORS
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll",
@@ -26,13 +35,14 @@ builder.Services.AddSwaggerGen(options =>
     options.TagActionsBy(api => new[] { api.GroupName ?? api.ActionDescriptor.RouteValues["controller"] });
 });
 
+// ✅ Usar la connection string que viene de variable de entorno o appsettings
 builder.Services.AddDbContext<GestionQuirurgicaContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"))
+    options.UseNpgsql(connectionString)
 );
 
 var app = builder.Build();
 
-// 🔥 ACTIVAR CORS (AGREGAR ESTO)
+// 🔥 ACTIVAR CORS
 app.UseCors("AllowAll");
 
 using (var scope = app.Services.CreateScope())
