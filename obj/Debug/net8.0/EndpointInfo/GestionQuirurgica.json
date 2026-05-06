@@ -1,0 +1,4522 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Gestión Quirúrgica API",
+    "description": "Microservicio Gestión Quirúrgica · UPDS · 5FN · MIS · .NET 8 + PostgreSQL",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Cirujanos": {
+      "get": {
+        "tags": [
+          "Cirujanos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cirujanos"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Especialidad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnosExperiencia",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Cirujanos/{codigo}": {
+      "get": {
+        "tags": [
+          "Cirujanos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CirujanoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CirujanoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CirujanoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cirujanos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Especialidad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "AnosExperiencia",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cirujanos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ConsultasGenericas/cg01-listado-procedimientos-paciente-sala": {
+      "get": {
+        "tags": [
+          "ConsultasGenericas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoPacienteSalaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoPacienteSalaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoPacienteSalaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ConsultasGenericas/cg02-count-procedimientos-por-estado": {
+      "get": {
+        "tags": [
+          "ConsultasGenericas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConteoEstadoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConteoEstadoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ConteoEstadoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ConsultasGenericas/cg03-promedio-experiencia-por-especialidad": {
+      "get": {
+        "tags": [
+          "ConsultasGenericas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExperienciaCirujanoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExperienciaCirujanoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ExperienciaCirujanoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ConsultasGenericas/cg04-detalle-por-codigo/{codigoProcedimiento}": {
+      "get": {
+        "tags": [
+          "ConsultasGenericas"
+        ],
+        "parameters": [
+          {
+            "name": "codigoProcedimiento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleProcedimientoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleProcedimientoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DetalleProcedimientoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ConsultasGenericas/cg05-cirujanos-sin-procedimiento": {
+      "get": {
+        "tags": [
+          "ConsultasGenericas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoSinProcedimientoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoSinProcedimientoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirujanoSinProcedimientoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/EquiposMedicos": {
+      "get": {
+        "tags": [
+          "EquiposMedicos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "EquiposMedicos"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fabricante",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UltimoMantenimiento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EstadoOperativo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/EquiposMedicos/{codigo}": {
+      "get": {
+        "tags": [
+          "EquiposMedicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EquipoMedicoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "EquiposMedicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fabricante",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UltimoMantenimiento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EstadoOperativo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "EquiposMedicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InventarioInsumos": {
+      "get": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UnidadMedida",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CantidadMinima",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CantidadActual",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InventarioInsumos/{codigo}": {
+      "get": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InsumoQuirurgicoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UnidadMedida",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CantidadMinima",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "CantidadActual",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/InventarioInsumos/verificar": {
+      "get": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "insumos",
+            "in": "query",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/VerificacionInsumoDTO"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResultadoVerificacionDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResultadoVerificacionDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ResultadoVerificacionDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/InventarioInsumos/consumo": {
+      "post": {
+        "tags": [
+          "InventarioInsumos"
+        ],
+        "parameters": [
+          {
+            "name": "CodigoInsumo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CantidadConsumida",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "UsuarioRegistra",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Mis/uc01-cirugia-electiva-programada": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaElectivaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaElectivaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaElectivaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc02-entradas-a-quirofano": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntradaQuirofanoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntradaQuirofanoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EntradaQuirofanoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc03-checklist-seguridad-pendiente": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChecklistPendienteDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChecklistPendienteDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChecklistPendienteDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc04-procedimientos-en-curso": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEnCursoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEnCursoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEnCursoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc05-incidencias-por-procedimiento": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IncidenciaProcedimientoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IncidenciaProcedimientoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/IncidenciaProcedimientoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc07-material-reservado": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc08-cirugias-finalizadas": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaFinalizadaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaFinalizadaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaFinalizadaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc09-reporte-uso-por-sala": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteSalaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteSalaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReporteSalaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc10-roles-asignados-por-procedimiento": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolAsignadoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolAsignadoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolAsignadoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc11-disponibilidad-salas": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DisponibilidadSalaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DisponibilidadSalaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DisponibilidadSalaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc12-cirugias-urgencia": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaUrgenciaDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaUrgenciaDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CirugiaUrgenciaDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc13-historial-clinico/{codigoPaciente}": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "parameters": [
+          {
+            "name": "codigoPaciente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorialClinicoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorialClinicoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HistorialClinicoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc14-equipos-mantenimiento-vencido": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoVencidoGrupoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoVencidoGrupoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/EquipoVencidoGrupoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/uc15-control-tiempos-quirurgicos": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TiempoQuirurgicoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TiempoQuirurgicoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TiempoQuirurgicoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Mis/resumen-ejecutivo": {
+      "get": {
+        "tags": [
+          "Mis"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResumenEjecutivoDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResumenEjecutivoDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ResumenEjecutivoDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Pacientes": {
+      "get": {
+        "tags": [
+          "Pacientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PacienteResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PacienteResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PacienteResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Edad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "DiagnosticoPre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Alergias",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GrupoSanguineo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Pacientes/{codigo}": {
+      "get": {
+        "tags": [
+          "Pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PacienteResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Edad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "DiagnosticoPre",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Alergias",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "GrupoSanguineo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pacientes"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosEquipo": {
+      "get": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoEquipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EstadoUso",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Observaciones",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosEquipo/{codigo}": {
+      "get": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoEquipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EstadoUso",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Observaciones",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosEquipo/detalle-completo": {
+      "get": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MaterialReservadoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosEquipo/por-procedimiento/{codigoProcedimiento}": {
+      "get": {
+        "tags": [
+          "ProcedimientosEquipo"
+        ],
+        "parameters": [
+          {
+            "name": "codigoProcedimiento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoEquipoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosQuirurgicos": {
+      "get": {
+        "tags": [
+          "ProcedimientosQuirurgicos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ProcedimientosQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoPaciente",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoSala",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HoraInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "HoraFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EstadoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Prioridad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProcedimientosQuirurgicos/{codigo}": {
+      "get": {
+        "tags": [
+          "ProcedimientosQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProcedimientoQuirurgicoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ProcedimientosQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoPaciente",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoSala",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HoraInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "HoraFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "EstadoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Prioridad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProcedimientosQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProgramacionCirugia": {
+      "get": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoPaciente",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoSala",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoCirujanoSolicitante",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "HoraInicioEstimada",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "HoraFinEstimada",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "TipoCirugia",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Prioridad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Observaciones",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProgramacionCirugia/{codigo}": {
+      "get": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProgramacionCirugiaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProgramacionCirugia/pendientes": {
+      "get": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProgramacionCirugia/{codigo}/estado": {
+      "put": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NuevoEstado",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Observaciones",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/ProgramacionCirugia/{codigo}/ejecutar": {
+      "post": {
+        "tags": [
+          "ProgramacionCirugia"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RegistrosFallecimiento": {
+      "get": {
+        "tags": [
+          "RegistrosFallecimiento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RegistrosFallecimiento"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaHoraFallecimiento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "CausaFallecimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UsuarioRegistra",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RegistrosFallecimiento/pendientes": {
+      "get": {
+        "tags": [
+          "RegistrosFallecimiento"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RegistrosFallecimiento/{codigo}": {
+      "get": {
+        "tags": [
+          "RegistrosFallecimiento"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RegistroFallecimientoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/RegistrosFallecimiento/{codigo}/legalizacion": {
+      "post": {
+        "tags": [
+          "RegistrosFallecimiento"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NumeroActaLegal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "EstadoLegal",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Observaciones",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RolesQuirurgicos": {
+      "get": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoCirujano",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Rol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RolesQuirurgicos/{codigo}": {
+      "get": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoCirujano",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Rol",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/RolesQuirurgicos/por-procedimiento/{codigoProcedimiento}": {
+      "get": {
+        "tags": [
+          "RolesQuirurgicos"
+        ],
+        "parameters": [
+          {
+            "name": "codigoProcedimiento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/RolQuirurgicoResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SalasQuirurgicas": {
+      "get": {
+        "tags": [
+          "SalasQuirurgicas"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "SalasQuirurgicas"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NumeroSala",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NivelEsterilidad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Disponible",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "UltimaLimpieza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/SalasQuirurgicas/{codigo}": {
+      "get": {
+        "tags": [
+          "SalasQuirurgicas"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SalaQuirurgicaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SalasQuirurgicas"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NumeroSala",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "NivelEsterilidad",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Disponible",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "UltimaLimpieza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "SalasQuirurgicas"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TimelineIncidencias": {
+      "get": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "parameters": [
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Timestamp",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Descripcion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UsuarioRegistra",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TimelineIncidencias/{codigo}": {
+      "get": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Codigo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Timestamp",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Tipo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Descripcion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "UsuarioRegistra",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/TimelineIncidencias/por-procedimiento/{codigoProcedimiento}": {
+      "get": {
+        "tags": [
+          "TimelineIncidencias"
+        ],
+        "parameters": [
+          {
+            "name": "codigoProcedimiento",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TimelineIncidenciaResponseDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChecklistPendienteDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "alerta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CirugiaElectivaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "diagnosticoPre": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CirugiaFinalizadaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "duracionMinutos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CirugiaUrgenciaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "diagnosticoPre": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CirujanoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "anosExperiencia": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CirujanoSinProcedimientoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "anosExperiencia": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ConteoEstadoDTO": {
+        "type": "object",
+        "properties": {
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalProcedimientos": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleCabeceraDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "diagnosticoPre": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleCirujanoDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleEquipoDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "fabricante": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoUso": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DetalleProcedimientoDTO": {
+        "type": "object",
+        "properties": {
+          "cabecera": {
+            "$ref": "#/components/schemas/DetalleCabeceraDTO"
+          },
+          "cirujanos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetalleCirujanoDTO"
+            },
+            "nullable": true
+          },
+          "equipos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DetalleEquipoDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DisponibilidadSalaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "disponible": {
+            "type": "boolean"
+          },
+          "ultimaLimpieza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tieneProcEnCurso": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EntradaQuirofanoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoEvento": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaEntrada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "usuarioRegistro": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "EquipoMedicoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "fabricante": {
+            "type": "string",
+            "nullable": true
+          },
+          "ultimoMantenimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoOperativo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EquipoVencidoDetalleDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "ultimoMantenimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoOperativo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "EquipoVencidoGrupoDTO": {
+        "type": "object",
+        "properties": {
+          "fabricante": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalEquiposVencidos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equipos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/EquipoVencidoDetalleDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ExperienciaCirujanoDTO": {
+        "type": "object",
+        "properties": {
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalCirujanos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sumaAnosExperiencia": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "promedioAnosExperiencia": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistorialClinicoDTO": {
+        "type": "object",
+        "properties": {
+          "paciente": {
+            "$ref": "#/components/schemas/HistorialPacienteDTO"
+          },
+          "procedimientos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/HistorialProcedimientoDTO"
+            },
+            "nullable": true
+          },
+          "total": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistorialPacienteDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "diagnosticoPre": {
+            "type": "string",
+            "nullable": true
+          },
+          "alergias": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "HistorialProcedimientoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "IncidenciaProcedimientoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "tipoEvento": {
+            "type": "string",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioRegistra": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InsumoQuirurgicoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidadMedida": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidadMinima": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadActual": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadNecesaria": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "alerta": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MaterialReservadoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoAsignacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoEquipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEquipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fabricante": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PacienteResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "diagnosticoPre": {
+            "type": "string",
+            "nullable": true
+          },
+          "alergias": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcedimientoEnCursoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFinProgramada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcedimientoEquipoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoEquipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreEquipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoUso": {
+            "type": "string",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcedimientoPacienteSalaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "grupoSanguineo": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProcedimientoQuirurgicoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProgramacionCirugiaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaSolicitada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaInicioEstimada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFinEstimada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tipoCirugia": {
+            "type": "string",
+            "nullable": true
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          },
+          "observaciones": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoProgramacion": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegistroFallecimientoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombrePaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPaciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaHoraFallecimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "causaFallecimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioRegistra": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroActaLegal": {
+            "type": "string",
+            "nullable": true
+          },
+          "estadoLegal": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReporteSalaDTO": {
+        "type": "object",
+        "properties": {
+          "codigoSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "disponible": {
+            "type": "boolean"
+          },
+          "ultimaLimpieza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "totalProcedimientos": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResultadoVerificacionDTO": {
+        "type": "object",
+        "properties": {
+          "codigoInsumo": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreInsumo": {
+            "type": "string",
+            "nullable": true
+          },
+          "unidadMedida": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidadEsperada": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadActual": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cantidadFaltante": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ResumenEjecutivoDTO": {
+        "type": "object",
+        "properties": {
+          "totalProcedimientos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "enCurso": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "programados": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "finalizados": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCirujanosActivos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "salasDisponibles": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "equiposOperativos": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "incidenciasRegistradas": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "procedimientosPorPrioridad": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ConteoEstadoDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolAsignadoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "codigoCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RolQuirurgicoResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCirujano": {
+            "type": "string",
+            "nullable": true
+          },
+          "rol": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalaQuirurgicaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "numeroSala": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelEsterilidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "disponible": {
+            "type": "boolean"
+          },
+          "ultimaLimpieza": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TiempoQuirurgicoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "sala": {
+            "type": "string",
+            "nullable": true
+          },
+          "horaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "horaFinProgramada": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "estadoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "duracionProgramadaMin": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "prioridad": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TimelineIncidenciaResponseDTO": {
+        "type": "object",
+        "properties": {
+          "codigo": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoProcedimiento": {
+            "type": "string",
+            "nullable": true
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "tipo": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "usuarioRegistra": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "VerificacionInsumoDTO": {
+        "type": "object",
+        "properties": {
+          "codigoInsumo": {
+            "type": "string",
+            "nullable": true
+          },
+          "cantidadEsperada": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

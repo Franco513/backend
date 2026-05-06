@@ -1,0 +1,2143 @@
+[
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.CirujanosController",
+    "Method": "GetAll",
+    "RelativePath": "api/Cirujanos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.CirujanoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.CirujanosController",
+    "Method": "Create",
+    "RelativePath": "api/Cirujanos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Especialidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnosExperiencia",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.CirujanosController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/Cirujanos/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.CirujanoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.CirujanosController",
+    "Method": "Update",
+    "RelativePath": "api/Cirujanos/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Especialidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnosExperiencia",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.CirujanosController",
+    "Method": "Delete",
+    "RelativePath": "api/Cirujanos/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ConsultasGenericasController",
+    "Method": "CG01",
+    "RelativePath": "api/ConsultasGenericas/cg01-listado-procedimientos-paciente-sala",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProcedimientoPacienteSalaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ConsultasGenericasController",
+    "Method": "CG02",
+    "RelativePath": "api/ConsultasGenericas/cg02-count-procedimientos-por-estado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ConteoEstadoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ConsultasGenericasController",
+    "Method": "CG03",
+    "RelativePath": "api/ConsultasGenericas/cg03-promedio-experiencia-por-especialidad",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ExperienciaCirujanoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ConsultasGenericasController",
+    "Method": "CG04",
+    "RelativePath": "api/ConsultasGenericas/cg04-detalle-por-codigo/{codigoProcedimiento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.DetalleProcedimientoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ConsultasGenericasController",
+    "Method": "CG05",
+    "RelativePath": "api/ConsultasGenericas/cg05-cirujanos-sin-procedimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.CirujanoSinProcedimientoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.EquiposMedicosController",
+    "Method": "GetAll",
+    "RelativePath": "api/EquiposMedicos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.EquipoMedicoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.EquiposMedicosController",
+    "Method": "Create",
+    "RelativePath": "api/EquiposMedicos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fabricante",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UltimoMantenimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoOperativo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.EquiposMedicosController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/EquiposMedicos/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.EquipoMedicoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.EquiposMedicosController",
+    "Method": "Update",
+    "RelativePath": "api/EquiposMedicos/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fabricante",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UltimoMantenimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoOperativo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.EquiposMedicosController",
+    "Method": "Delete",
+    "RelativePath": "api/EquiposMedicos/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "GetAll",
+    "RelativePath": "api/InventarioInsumos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.InsumoQuirurgicoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "Create",
+    "RelativePath": "api/InventarioInsumos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UnidadMedida",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadMinima",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadActual",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/InventarioInsumos/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.InsumoQuirurgicoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "Update",
+    "RelativePath": "api/InventarioInsumos/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UnidadMedida",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadMinima",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadActual",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "Delete",
+    "RelativePath": "api/InventarioInsumos/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "RegistrarConsumo",
+    "RelativePath": "api/InventarioInsumos/consumo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodigoInsumo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CantidadConsumida",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsuarioRegistra",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.InventarioInsumosController",
+    "Method": "Verificar",
+    "RelativePath": "api/InventarioInsumos/verificar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "insumos",
+        "Type": "System.Collections.Generic.List\u00601[[Gestion_Quirurgica.DTOs.VerificacionInsumoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ResultadoVerificacionDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "ResumenEjecutivo",
+    "RelativePath": "api/Mis/resumen-ejecutivo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.ResumenEjecutivoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC01",
+    "RelativePath": "api/Mis/uc01-cirugia-electiva-programada",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.CirugiaElectivaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC02",
+    "RelativePath": "api/Mis/uc02-entradas-a-quirofano",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.EntradaQuirofanoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC03",
+    "RelativePath": "api/Mis/uc03-checklist-seguridad-pendiente",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ChecklistPendienteDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC04",
+    "RelativePath": "api/Mis/uc04-procedimientos-en-curso",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProcedimientoEnCursoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC05",
+    "RelativePath": "api/Mis/uc05-incidencias-por-procedimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.IncidenciaProcedimientoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC07",
+    "RelativePath": "api/Mis/uc07-material-reservado",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.MaterialReservadoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC08",
+    "RelativePath": "api/Mis/uc08-cirugias-finalizadas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.CirugiaFinalizadaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC09",
+    "RelativePath": "api/Mis/uc09-reporte-uso-por-sala",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ReporteSalaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC10",
+    "RelativePath": "api/Mis/uc10-roles-asignados-por-procedimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.RolAsignadoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC11",
+    "RelativePath": "api/Mis/uc11-disponibilidad-salas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.DisponibilidadSalaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC12",
+    "RelativePath": "api/Mis/uc12-cirugias-urgencia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.CirugiaUrgenciaDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC13",
+    "RelativePath": "api/Mis/uc13-historial-clinico/{codigoPaciente}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoPaciente",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.HistorialClinicoDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC14",
+    "RelativePath": "api/Mis/uc14-equipos-mantenimiento-vencido",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.EquipoVencidoGrupoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.MisController",
+    "Method": "UC15",
+    "RelativePath": "api/Mis/uc15-control-tiempos-quirurgicos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.TiempoQuirurgicoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.PacientesController",
+    "Method": "GetAll",
+    "RelativePath": "api/Pacientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.PacienteResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.PacientesController",
+    "Method": "Create",
+    "RelativePath": "api/Pacientes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Edad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiagnosticoPre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alergias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GrupoSanguineo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.PacientesController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/Pacientes/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.PacienteResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.PacientesController",
+    "Method": "Update",
+    "RelativePath": "api/Pacientes/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Edad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "DiagnosticoPre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alergias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GrupoSanguineo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.PacientesController",
+    "Method": "Delete",
+    "RelativePath": "api/Pacientes/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProcedimientosEquipo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProcedimientoEquipoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "Create",
+    "RelativePath": "api/ProcedimientosEquipo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoEquipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoUso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/ProcedimientosEquipo/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.ProcedimientoEquipoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "Update",
+    "RelativePath": "api/ProcedimientosEquipo/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoEquipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoUso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "Delete",
+    "RelativePath": "api/ProcedimientosEquipo/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "GetDetalleCompleto",
+    "RelativePath": "api/ProcedimientosEquipo/detalle-completo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.MaterialReservadoDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosEquipoController",
+    "Method": "GetPorProcedimiento",
+    "RelativePath": "api/ProcedimientosEquipo/por-procedimiento/{codigoProcedimiento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProcedimientoEquipoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosQuirurgicosController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProcedimientosQuirurgicos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProcedimientoQuirurgicoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosQuirurgicosController",
+    "Method": "Create",
+    "RelativePath": "api/ProcedimientosQuirurgicos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoPaciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoSala",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prioridad",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosQuirurgicosController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/ProcedimientosQuirurgicos/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.ProcedimientoQuirurgicoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosQuirurgicosController",
+    "Method": "Update",
+    "RelativePath": "api/ProcedimientosQuirurgicos/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoPaciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoSala",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prioridad",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProcedimientosQuirurgicosController",
+    "Method": "Delete",
+    "RelativePath": "api/ProcedimientosQuirurgicos/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "GetAll",
+    "RelativePath": "api/ProgramacionCirugia",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.ProgramacionCirugiaResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "Create",
+    "RelativePath": "api/ProgramacionCirugia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoPaciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoSala",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoCirujanoSolicitante",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraInicioEstimada",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraFinEstimada",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoCirugia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Prioridad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/ProgramacionCirugia/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.ProgramacionCirugiaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "Delete",
+    "RelativePath": "api/ProgramacionCirugia/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "EjecutarProgramacion",
+    "RelativePath": "api/ProgramacionCirugia/{codigo}/ejecutar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "CambiarEstado",
+    "RelativePath": "api/ProgramacionCirugia/{codigo}/estado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "NuevoEstado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.ProgramacionCirugiaController",
+    "Method": "GetPendientes",
+    "RelativePath": "api/ProgramacionCirugia/pendientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RegistrosFallecimientoController",
+    "Method": "GetAll",
+    "RelativePath": "api/RegistrosFallecimiento",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.RegistroFallecimientoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RegistrosFallecimientoController",
+    "Method": "Create",
+    "RelativePath": "api/RegistrosFallecimiento",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaHoraFallecimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "CausaFallecimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsuarioRegistra",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RegistrosFallecimientoController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/RegistrosFallecimiento/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.RegistroFallecimientoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RegistrosFallecimientoController",
+    "Method": "AdjuntarLegalizacion",
+    "RelativePath": "api/RegistrosFallecimiento/{codigo}/legalizacion",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "NumeroActaLegal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "EstadoLegal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Observaciones",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RegistrosFallecimientoController",
+    "Method": "GetPendientes",
+    "RelativePath": "api/RegistrosFallecimiento/pendientes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.RegistroFallecimientoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "GetAll",
+    "RelativePath": "api/RolesQuirurgicos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.RolQuirurgicoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "Create",
+    "RelativePath": "api/RolesQuirurgicos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoCirujano",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/RolesQuirurgicos/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.RolQuirurgicoResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "Update",
+    "RelativePath": "api/RolesQuirurgicos/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoCirujano",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "Delete",
+    "RelativePath": "api/RolesQuirurgicos/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.RolesQuirurgicosController",
+    "Method": "GetPorProcedimiento",
+    "RelativePath": "api/RolesQuirurgicos/por-procedimiento/{codigoProcedimiento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.RolQuirurgicoResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.SalasQuirurgicasController",
+    "Method": "GetAll",
+    "RelativePath": "api/SalasQuirurgicas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.SalaQuirurgicaResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.SalasQuirurgicasController",
+    "Method": "Create",
+    "RelativePath": "api/SalasQuirurgicas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroSala",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NivelEsterilidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Disponible",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "UltimaLimpieza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.SalasQuirurgicasController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/SalasQuirurgicas/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.SalaQuirurgicaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.SalasQuirurgicasController",
+    "Method": "Update",
+    "RelativePath": "api/SalasQuirurgicas/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroSala",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NivelEsterilidad",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Disponible",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "UltimaLimpieza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.SalasQuirurgicasController",
+    "Method": "Delete",
+    "RelativePath": "api/SalasQuirurgicas/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "GetAll",
+    "RelativePath": "api/TimelineIncidencias",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.TimelineIncidenciaResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "Create",
+    "RelativePath": "api/TimelineIncidencias",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Timestamp",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsuarioRegistra",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "GetByCodigo",
+    "RelativePath": "api/TimelineIncidencias/{codigo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Gestion_Quirurgica.DTOs.TimelineIncidenciaResponseDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "Update",
+    "RelativePath": "api/TimelineIncidencias/{codigo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Codigo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Timestamp",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Descripcion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UsuarioRegistra",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "Delete",
+    "RelativePath": "api/TimelineIncidencias/{codigo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigo",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Gestion_Quirurgica.Controllers.TimelineIncidenciasController",
+    "Method": "GetPorProcedimiento",
+    "RelativePath": "api/TimelineIncidencias/por-procedimiento/{codigoProcedimiento}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "codigoProcedimiento",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Gestion_Quirurgica.DTOs.TimelineIncidenciaResponseDTO, GestionQuirurgica, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
